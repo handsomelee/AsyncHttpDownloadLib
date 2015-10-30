@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bpb="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <com.example.graphic.BitmapProgressBar
+        android:id="@+id/bmp_progress_bar"
+        android:layout_width="470dp"
+        android:layout_height="120dp"
+        android:background="@drawable/ko_bg_game_info_download"
+        bpb:bpb_height="95dp"
+        bpb:bpb_width="442dp" />
+
+</FrameLayout>

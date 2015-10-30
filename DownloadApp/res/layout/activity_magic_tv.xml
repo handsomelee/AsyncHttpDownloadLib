@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@android:color/white">
+  
+    <indi.liji.common.view.MagicTextView2 
+        android:id="@+id/magic_tv"
+        android:layout_width="200px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:singleLine="true"
+        android:ellipsize="marquee"
+        android:textSize="48px"
+        android:text="这是一个测试MagicTextView的程序"
+        android:textColor="#0000ff"
+        app:strokeColor="@android:color/black"
+        app:strokeJoinStyle="round"
+        app:strokeWidth="5px"
+        />
+
+</LinearLayout>
