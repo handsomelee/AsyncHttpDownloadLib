@@ -5,6 +5,8 @@ import java.io.File;
 import com.example.listviewdemo.R;
 
 import android.app.Activity;
+import android.app.NotificationManager;
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -17,6 +19,7 @@ import indi.liji.common.download.TaskDBManager;
 public class DownloadTestActivity extends Activity{
 	
 	private static final String TAG = DownloadTestActivity.class.getSimpleName();
+	
 	private ProgressBar mProgressBar0;
 	private Button      mDownloadBtn0;
 	private Button      mStopDownloadBtn0;
@@ -35,14 +38,22 @@ public class DownloadTestActivity extends Activity{
 	private DownloadTaskListener mDownloadListener0 = new DownloadTaskListener();
 	private DownloadTaskListener1 mDownloadListener1 = new DownloadTaskListener1();
 	
+	private NotificationManager mNotifyManager;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_download);
 		
+		this.mNotifyManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
 		TaskDBManager.init(this, false, "task.db");
+		initNotification();
 		
 		setUpUI();
+	}
+	
+	private void initNotification(){
+		
 	}
 	
 	private void setUpUI(){

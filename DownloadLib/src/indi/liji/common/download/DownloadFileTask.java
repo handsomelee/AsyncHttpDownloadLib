@@ -63,7 +63,8 @@ public class DownloadFileTask implements Runnable{
 			if (responseCode == HttpResponseCode.OK || responseCode == HttpResponseCode.PARTIAL_CONTENT){
 				DownloadFileManager manager = mDLManager;
 				if (task.fileSize == Task.NO_INIT_SIZE){
-					task.fileSize =  conn.getContentLength();
+					//有面试官说，通过获取文件的大小 contentLengh,有问题
+					task.fileSize =  conn.getContentLength(); 
 				}
 				task.status = Task.STATUS_RUNNABLE;
 				manager.updateTaskInfo(task.ID, task);
@@ -105,6 +106,11 @@ public class DownloadFileTask implements Runnable{
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}finally{
+			//Calls to disconnect() may return the socket to a pool of connected sockets
+			if (conn != null){
+			    conn.disconnect();
+			}
 		} 
 		Log.d(TAG, name + "run() end");
 	}
