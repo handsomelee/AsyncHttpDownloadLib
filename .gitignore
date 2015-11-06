@@ -1,1 +1,4 @@
+#忽略掉所有文件名 .DS_Store
 .DS_Store
+#忽略工程bin文件夹下所有内容
+bin/*
