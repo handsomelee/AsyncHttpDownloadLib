@@ -8,3 +8,6 @@ bin
 gen/*
 #忽略bin文件夹
 gen
+#忽略.classpath .project
+.classpath
+.project
