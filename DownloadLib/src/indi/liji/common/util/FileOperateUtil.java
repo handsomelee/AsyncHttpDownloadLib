@@ -1,7 +1,6 @@
 package indi.liji.common.util;
 
 import java.io.File;
-import java.io.RandomAccessFile;
 
 // @formatter:off
 /**
@@ -17,7 +16,8 @@ public class FileOperateUtil {
     // Constants
     // ===========================================================
     
-    private static final String TAG = FileOperateUtil.class.getSimpleName();
+    @SuppressWarnings("unused")
+	private static final String TAG = FileOperateUtil.class.getSimpleName();
 
     // ===========================================================
     // Fields

@@ -1,9 +1,3 @@
-/**
- * Copyright (C) © 2014 深圳市掌玩网络技术有限公司
- * ListViewDemo
- * DownloadManager.java
- */
-
 package indi.liji.common.download;
 
 import java.util.HashMap;

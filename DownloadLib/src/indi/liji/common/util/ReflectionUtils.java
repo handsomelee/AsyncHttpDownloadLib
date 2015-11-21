@@ -4,10 +4,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import android.util.Log;
-
 public class ReflectionUtils {
 	
+	@SuppressWarnings("unused")
 	private static final String TAG = ReflectionUtils.class.getSimpleName();
 
 	private ReflectionUtils() {
